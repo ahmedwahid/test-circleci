@@ -19,11 +19,11 @@ jobs:
             sudo mv /tmp/docker/* /usr/bin
       - run:
           name: Build Docker image
-          command: docker build -t ahmedwahid/test-circleci:v1 .
+          command: docker build -t ahmedwahid/test-circleci:v2 .
 
       - run:
           name: Push to Docker Hub
           command: |
             docker login -u ahmedwahid -p dckr_pat_rY_hnbZ94GPIqriSnYN45adTHe4
-            docker push ahmedwahid/test-circleci:v1
+            docker push ahmedwahid/test-circleci:v2
 
